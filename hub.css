@@ -1,0 +1,162 @@
+﻿:root {
+  --bg: #fcfbf8;
+  --ink: #182124;
+  --muted: #5e696b;
+  --card: #ffffff;
+  --line: #dce3df;
+  --a: #0c7d6c;
+  --b: #1c4fd6;
+  --c: #e06a2c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Avenir Next", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 16% 9%, #ffefcc 0%, transparent 42%),
+    radial-gradient(circle at 84% 18%, #d8edff 0%, transparent 40%),
+    var(--bg);
+}
+
+.hub {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 20px 36px;
+}
+
+.hero {
+  background: linear-gradient(130deg, var(--a), var(--b));
+  border-radius: 22px;
+  padding: 26px;
+  color: #fff;
+}
+
+.tag {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.hero h1 {
+  margin: 8px 0;
+  font-size: clamp(32px, 6vw, 54px);
+}
+
+.lead {
+  margin: 0;
+  max-width: 760px;
+  opacity: 0.95;
+}
+
+.cards {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.card p { color: #2f383a; }
+
+.highlight {
+  margin: 10px 0 14px;
+  padding: 10px 12px;
+  border-left: 4px solid var(--b);
+  background: #eef3ff;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.pulse-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.pulse-row span {
+  font-size: 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #f5f8ff;
+}
+
+.mini-viz {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px;
+  background: #f7fafc;
+}
+
+.mini-viz svg {
+  width: 100%;
+  height: 80px;
+}
+
+.mini-viz polyline {
+  fill: none;
+  stroke: var(--b);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 16px;
+}
+
+.facts span {
+  font-size: 12px;
+  background: #f4f7f6;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #182124;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.migration .btn { background: var(--b); }
+.dogs .btn { background: var(--a); }
+
+.foot {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}

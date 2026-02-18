@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zurich Data Playground</title>
+  <link rel="stylesheet" href="hub.css" />
+</head>
+<body>
+  <main class="hub">
+    <header class="hero">
+      <p class="tag">Zurich Open Data Microsite</p>
+      <h1>Zurich Data Playground</h1>
+      <p class="lead">
+        Two interactive stories, one city: migration dynamics over time and a living portrait of Zurich's dogs.
+      </p>
+    </header>
+
+    <section class="cards">
+      <article class="card migration">
+        <p class="kicker">Dataset 1</p>
+        <h2>Who moves to Zurich?</h2>
+        <p>
+          Explore monthly in-migration from 1998 to 2025 by age, origin, sex, district, and neighborhood.
+        </p>
+        <div class="pulse-row">
+          <span>1998 to 2025</span>
+          <span>12 Kreise</span>
+          <span>34 Quartiere</span>
+        </div>
+        <div class="mini-viz">
+          <svg viewBox="0 0 300 80" role="img" aria-label="Sample trend line">
+            <polyline points="0,62 30,58 60,61 90,48 120,45 150,41 180,46 210,34 240,29 270,25 300,18" />
+          </svg>
+        </div>
+        <p class="highlight">Trace neighborhood shifts and compare how local demographics changed year by year.</p>
+        <a class="btn" href="migration.html">Open Migration Explorer</a>
+      </article>
+
+      <article class="card dogs">
+        <p class="kicker">Dataset 2</p>
+        <h2>Dogs of Zurich</h2>
+        <p>
+          Discover where dogs live right now, their breed and age patterns, and the age profile of owners across areas.
+        </p>
+        <div class="facts">
+          <span>91k+ records</span>
+          <span>36 neighborhoods</span>
+          <span>Interactive filters</span>
+        </div>
+        <a class="btn" href="dogs.html">Open Dog Explorer</a>
+      </article>
+    </section>
+
+    <footer class="foot">
+      <p>Tip: Start with the full city, then isolate one Kreis to see local differences.</p>
+    </footer>
+  </main>
+</body>
+</html>
