@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bahnhofstrasse Footfall Explorer</title>
+  <link rel="stylesheet" href="../styles/pedestrians.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">Bahnhofstrasse Pedestrian Frequency</p>
+      <h1>How many people walk through Bahnhofstrasse?</h1>
+      <p class="subtitle">
+        Explore hourly pedestrian counts since 2021 for Bahnhofstrasse Nord, Mitte, and Sued.
+      </p>
+      <div class="load-row">
+        <a href="../index.html" class="pill">Back to Hub</a>
+        <label for="fileInput" class="pill">Load CSV Manually</label>
+        <input id="fileInput" type="file" accept=".csv" />
+        <span id="loadStatus">Trying to load footfall data from <code>assets/csv</code>.</span>
+      </div>
+    </header>
+
+    <section class="layout">
+      <aside class="panel filters">
+        <h2>Filters</h2>
+
+        <div class="field">
+          <label>Year Range</label>
+          <div class="range-row">
+            <input id="yearMin" type="range" />
+            <input id="yearMax" type="range" />
+          </div>
+          <p id="yearLabel" class="hint"></p>
+        </div>
+
+        <div class="field">
+          <label for="segmentSelect">Bahnhofstrasse Segment</label>
+          <select id="segmentSelect" multiple size="4"></select>
+          <p class="hint">Leave empty for all Bahnhofstrasse segments.</p>
+        </div>
+
+        <div class="field">
+          <label for="weatherSelect">Weather</label>
+          <select id="weatherSelect" multiple size="6"></select>
+          <p class="hint">Leave empty for all weather conditions.</p>
+        </div>
+
+        <div class="field" id="dayTypeFilter"></div>
+
+        <button id="resetBtn" class="ghost">Reset Filters</button>
+      </aside>
+
+      <section class="panel content">
+        <div id="kpis" class="kpis"></div>
+
+        <article class="viz-card">
+          <div class="viz-head">
+            <h3>Monthly Pedestrian Volume</h3>
+            <p>Total measured pedestrians per month across selected segments.</p>
+          </div>
+          <canvas id="monthlyCanvas" width="920" height="320"></canvas>
+        </article>
+
+        <div class="grid-2">
+          <article class="viz-card">
+            <div class="viz-head">
+              <h3>Average Hourly Profile</h3>
+              <p>Typical pedestrian volume by hour of day.</p>
+            </div>
+            <canvas id="hourlyCanvas" width="450" height="300"></canvas>
+          </article>
+
+          <article class="viz-card">
+            <div class="viz-head">
+              <h3>Segment Comparison</h3>
+              <p>Total pedestrians by Bahnhofstrasse segment.</p>
+            </div>
+            <canvas id="segmentCanvas" width="450" height="300"></canvas>
+          </article>
+        </div>
+
+        <article class="viz-card story" id="story"></article>
+      </section>
+    </section>
+  </main>
+
+  <script src="../scripts/pedestrians.js"></script>
+</body>
+</html>

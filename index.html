@@ -1,18 +1,21 @@
 ﻿<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zurich Data Playground</title>
-  <link rel="stylesheet" href="hub.css" />
+  <link rel="stylesheet" href="styles/hub.css" />
 </head>
+
 <body>
   <main class="hub">
     <header class="hero">
       <p class="tag">Zurich Open Data Microsite</p>
       <h1>Zurich Data Playground</h1>
       <p class="lead">
-        Two interactive stories, one city: migration dynamics over time and a living portrait of Zurich's dogs.
+        Five interactive stories, one city: migration, dogs, voting participation, party slogans, and Bahnhofstrasse
+        footfall.
       </p>
     </header>
 
@@ -28,13 +31,7 @@
           <span>12 Kreise</span>
           <span>34 Quartiere</span>
         </div>
-        <div class="mini-viz">
-          <svg viewBox="0 0 300 80" role="img" aria-label="Sample trend line">
-            <polyline points="0,62 30,58 60,61 90,48 120,45 150,41 180,46 210,34 240,29 270,25 300,18" />
-          </svg>
-        </div>
-        <p class="highlight">Trace neighborhood shifts and compare how local demographics changed year by year.</p>
-        <a class="btn" href="migration.html">Open Migration Explorer</a>
+        <a class="btn" href="routes/migration.html">Open Migration Explorer</a>
       </article>
 
       <article class="card dogs">
@@ -46,15 +43,58 @@
         <div class="facts">
           <span>91k+ records</span>
           <span>36 neighborhoods</span>
-          <span>Interactive filters</span>
+          <span>Dog Ownership Patterns</span>
         </div>
-        <a class="btn" href="dogs.html">Open Dog Explorer</a>
+        <a class="btn" href="routes/dogs.html">Open Dog Explorer</a>
+      </article>
+
+      <article class="card voting">
+        <p class="kicker">Dataset 3</p>
+        <h2>Voting Participation</h2>
+        <p>
+          Follow how turnout builds up before each vote date and compare final participation levels over time.
+        </p>
+        <div class="facts">
+          <span>22 vote dates</span>
+          <span>2021 to 2026</span>
+          <span>Daily progression</span>
+        </div>
+        <a class="btn" href="routes/voting.html">Open Voting Explorer</a>
+      </article>
+
+      <article class="card parolen">
+        <p class="kicker">Dataset 4</p>
+        <h2>Campaign Slogans</h2>
+        <p>
+          Track party positions in Gemeindeabstimmungen and discover what policy themes dominated each year.
+        </p>
+        <div class="facts">
+          <span>2012 to 2025</span>
+          <span>Party stances</span>
+          <span>Semantic topics</span>
+        </div>
+        <a class="btn" href="routes/parolen.html">Open Slogan Explorer</a>
+      </article>
+
+      <article class="card pedestrians">
+        <p class="kicker">Dataset 5</p>
+        <h2>Bahnhofstrasse Footfall</h2>
+        <p>
+          Track how many pedestrians pass through Bahnhofstrasse by hour, month, segment, and weather conditions.
+        </p>
+        <div class="facts">
+          <span>2021 to 2026</span>
+          <span>Hourly measurements</span>
+          <span>Nord/Mitte/Sued</span>
+        </div>
+        <a class="btn" href="routes/pedestrians.html">Open Footfall Explorer</a>
       </article>
     </section>
 
     <footer class="foot">
-      <p>Tip: Start with the full city, then isolate one Kreis to see local differences.</p>
+      <p>Tip: start broad, then isolate one district or one vote date for sharper insights.</p>
     </footer>
   </main>
 </body>
+
 </html>
